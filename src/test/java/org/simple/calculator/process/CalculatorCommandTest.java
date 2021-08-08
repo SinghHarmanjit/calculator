@@ -20,8 +20,8 @@ public class CalculatorCommandTest {
     void executeMonomial() {
         CalculatorCommand command = new CalculatorCommand(new MonomialOperation() {
             @Override
-            public BigDecimal calculate(BigDecimal input) {
-                return input;
+            public BigDecimal calculate(BigDecimal[] input) {
+                return input[0];
             }
 
             @Override

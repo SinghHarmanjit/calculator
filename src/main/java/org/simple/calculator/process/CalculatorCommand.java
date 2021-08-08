@@ -16,12 +16,6 @@ public class CalculatorCommand {
     }
 
     public BigDecimal execute() {
-        if (operation instanceof BinomialOperation){
-            return ((BinomialOperation) operation).calculate(operands[0], operands[1]);
-        } else if (operation instanceof MonomialOperation) {
-            return ((MonomialOperation) operation).calculate(operands[0]);
-        }
-
-        return null;
+        return operation.calculate(operands);
     }
 }
